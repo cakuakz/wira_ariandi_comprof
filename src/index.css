@@ -28,3 +28,31 @@
 .badge-inner-shadow {
   @apply shadow-[inset_0px_-14px_24px_rgba(46,3,3,0.4)]
 }
+
+.home-banner {
+  background-image: url("/bg_home_wirandi.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.about-banner {
+  background-image: url("/organisasi_banner_svg.svg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wira-ariandi-banner {
+  background-image: url("https://res.cloudinary.com/rafirfansyah/image/upload/v1738778709/wira_ariandi_banner_rcjvjg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.wira-ariandi-utama-banner {
+  background-image: url("https://res.cloudinary.com/rafirfansyah/image/upload/v1738780615/wira_ariandi_utama_banner_rapefu.png");
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

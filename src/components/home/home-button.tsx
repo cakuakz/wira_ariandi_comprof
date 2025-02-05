@@ -3,7 +3,7 @@ type HomeButtonProps = {
     onClick?: () => void
 }
 
-export default function HomeButton({ text, onClick }: HomeButtonProps) {
+export default function MainButton({ text, onClick }: HomeButtonProps) {
   return (
     <button
         type="button"
