@@ -15,7 +15,7 @@ export default function WiraAriandi() {
 
   return (
     <BaseLayout
-      title="PT Wira Ariandi Detail"
+      title="PT Wira Ariandi"
       description="Detail page about PT. Wira Ariandi - Trading BBM"
     >
       <div>

@@ -13,7 +13,7 @@ export const navData: NavBarProps[] = [
         href: '/organisasi'
     },
     {
-        placeholder: "Profil",
-        href: '/profil'
+        placeholder: "Kontak",
+        href: '/kontak'
     }
 ]

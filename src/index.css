@@ -21,6 +21,8 @@
   }
 }
 
+#map { height: 180px; }
+
 .badge-drop-shadow {
   @apply drop-shadow-[0px_6px_18px_rgba(255,52,33,0.3)]
 }
@@ -53,6 +55,13 @@
 .wira-ariandi-utama-banner {
   background-image: url("https://res.cloudinary.com/rafirfansyah/image/upload/v1738780615/wira_ariandi_utama_banner_rapefu.png");
   background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.etam-wira-banner {
+  background-image: url("https://res.cloudinary.com/rafirfansyah/image/upload/v1739109721/pt_etam_wira_banner_yomknv.png");
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 }
