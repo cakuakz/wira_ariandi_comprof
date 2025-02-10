@@ -1,3 +1,4 @@
+import DetailOrgTitle from "../../components/detail-org/detail-org-title";
 import BaseLayout from "../../layout/base-layout";
 import CloudinaryImg from "../../utils/helper/use-cloudinary-img";
 
@@ -38,12 +39,13 @@ export default function WiraAriandiUtama() {
     >
       <div>
         <div className="relative flex flex-col items-center pb-32 pt-64 max-w-screen w-full lg:px-20 wira-ariandi-utama-banner">
-          <span className="relative top-32 w-full text-center md:w-fit md:px-12 py-3 bg-gradient-to-l from-[#851111] to-[#EB1E1E] text-[42px] lg:text-[56px] font-semibold">
-            PT WIRA ARIANDI
-          </span>
+          <DetailOrgTitle title="PT WIRA ARIANDI UTAMA" />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
+          data-aos="fade-left"
+        >
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738780613/wira_ariandi_utama_detail_1_wexebw.png"
             className="rounded-sm grow"
@@ -71,7 +73,10 @@ export default function WiraAriandiUtama() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center space-y-8 lg:space-y-0 py-24 lg:py-28 px-5">
+        <div 
+          className="flex flex-col items-center space-y-8 lg:space-y-0 py-24 lg:py-28 px-5"
+          data-aos="fade-up"
+        >
           <div className="flex flex-col items-center text-center mb-20">
             <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl max-w-5xl mx-auto leading-relaxed">
               Fasilitas Armada Laut
@@ -86,7 +91,10 @@ export default function WiraAriandiUtama() {
           />
         </div>
 
-        <div className="flex flex-col items-center space-y-8 lg:space-y-0 py-24 lg:py-28 px-5">
+        <div 
+          className="flex flex-col items-center space-y-8 lg:space-y-0 py-24 lg:py-28 px-5"
+          data-aos="fade-up"
+        >
           <div className="flex flex-col items-center text-center mb-20">
             <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl mx-auto leading-relaxed">
               Wilayah Operasi Perdagangan & Transportasi BBM

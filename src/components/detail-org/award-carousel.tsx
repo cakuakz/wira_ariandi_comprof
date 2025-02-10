@@ -3,68 +3,11 @@
 import { useCallback, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import CloudinaryImg from "../../utils/helper/use-cloudinary-img";
+import { awards } from "../../utils/static/etam-awards";
 
 export default function AwardsCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(false);
-
-  const awards = [
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124474/best_2_performance_industri_nasiona_ert2fu.png",
-      title: "The Best 2 Performance",
-      subtitle: "Industri Nasional 2013",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124474/best_1_sales_growth_p13xx5.png",
-      title: "The Best 1 Sales Growth",
-      subtitle: "Industri Nasional 2015",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124475/best_cluster_management_badhur.png",
-      title: "The Best Cluster Management",
-      subtitle: "SR VI 2018",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124472/best_performance_vendor_held_stock_websav.png",
-      title: "The Best Performance For Vendor Held Stock",
-      subtitle: "PT Mandala Karya Prima 2020",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124472/best_performance_sales_force_gnyeh1.png",
-      title: "The Best Performance Sales Force Gold",
-      subtitle: "SR VI 2019",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124472/best_territory_management_phwden.png",
-      title: "The Best Territory Management",
-      subtitle: "Territory Tarakan SR VI 2019",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124472/best_customer_acquisition_aw1kmk.png",
-      title: "The Best Customer Acquisition",
-      subtitle: "SR VI 2019",
-    },
-    {
-      image:
-        "https://res.cloudinary.com/rafirfansyah/image/upload/v1739124472/best_performance_sales_force_silver_wandn4.png",
-      title: "The Best Performance Sales Force Silver",
-      subtitle: "SR VI 2019",
-    },
-    // Additional awards to make up 17 total
-    ...Array(9).fill({
-      image:
-        "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-P6RfYvSR5rWCQs9v6RadQnoBAlo6hP.png",
-      title: "Achievement Award",
-      subtitle: "Category 2023",
-    }),
-  ];
 
   const totalSlides = awards.length;
 
@@ -120,9 +63,11 @@ export default function AwardsCarousel() {
   return (
     <section className="py-12 px-5 lg:px-20">
       <div className="container mx-auto px-4">
-        <h2 className="mb-12 text-center text-3xl font-bold tracking-tight text-white">
-          Multiple <span className="text-gray-400">Awards</span>
-        </h2>
+        <div className="mb-8">
+          <p className="text-transparent text-center bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl mx-auto leading-relaxed">
+            Company Awards
+          </p>
+        </div>
 
         <div className="relative">
           <div className="overflow-hidden">
@@ -143,8 +88,8 @@ export default function AwardsCarousel() {
                         />
                       </div>
                       <div className="text-center">
-                        <h3 className="text-sm font-semibold text-white">{award.title}</h3>
-                        <p className="mt-1 text-xs text-gray-400">{award.subtitle}</p>
+                        <h3 className="text-sm font-semibold text-white">{award.title.toUpperCase()}</h3>
+                        <p className="mt-1 text-xs text-gray-400">{award.subtitle.toUpperCase()}</p>
                       </div>
                     </div>
                   </div>
@@ -157,8 +102,8 @@ export default function AwardsCarousel() {
         <div className="mt-8 flex justify-center gap-4">
           <button
             onClick={prevSlide}
-            className={`bg-red-600 p-3 rounded-lg transition-colors ${
-              currentSlide === 0 ? "opacity-50 cursor-not-allowed" : "hover:bg-red-700"
+            className={`bg-gradient-to-r from-[#EB1E1E] to-[#851111] py-2 px-1.5 rounded-lg transition-colors ${
+              currentSlide === 0 ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
             }`}
             disabled={isTransitioning || currentSlide === 0}
             aria-label="Previous slide"
@@ -167,8 +112,8 @@ export default function AwardsCarousel() {
           </button>
           <button
             onClick={nextSlide}
-            className={`bg-red-600 p-3 rounded-lg transition-colors ${
-              currentSlide >= maxSlide ? "opacity-50 cursor-not-allowed" : "hover:bg-red-700"
+            className={`bg-gradient-to-r from-[#EB1E1E] to-[#851111] py-2 px-1.5 rounded-lg transition-colors ${
+              currentSlide >= maxSlide ? "opacity-50 cursor-not-allowed" : "cursor-pointer"
             }`}
             disabled={isTransitioning || currentSlide >= maxSlide}
             aria-label="Next slide"

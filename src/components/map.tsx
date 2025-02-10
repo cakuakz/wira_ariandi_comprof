@@ -39,28 +39,31 @@ export default function MapComponent({ center }: MapComponentProps) {
   }
 
   return (
-    <MapContainer
-      center={center}
-      zoom={13}
-      style={{ height: "440px", width: "672px" }}
-      className="h-full w-full"
-    >
-      <TileLayer
-        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-      />
-      {locations.map((location) => (
-        <Marker key={location.name} position={location.coordinates as [number, number]} icon={icon}>
-          <Popup>
-            <div className="text-black">
-              <h3 className="font-medium">{location.name}</h3>
-              <p className="text-sm">{location.address}</p>
-              {location.phone && <p className="text-sm">Tel: {location.phone}</p>}
-            </div>
-          </Popup>
-        </Marker>
-      ))}
-      <ChangeMapView coordinates={center} />
-    </MapContainer>
+    <div className="relative z-0 w-full max-w-screen lg:max-w-[624px] h-[440px]">
+      <MapContainer
+        center={center}
+        zoom={13}
+        style={{ height: "100%", width: "100%" }}
+        scrollWheelZoom={false}
+        className="absolute top-0 left-0 w-full h-full"
+      >
+        <TileLayer
+          attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        />
+        {locations.map((location) => (
+          <Marker key={location.name} position={location.coordinates as [number, number]} icon={icon}>
+            <Popup>
+              <div className="text-black">
+                <h3 className="font-medium">{location.name}</h3>
+                <p className="text-sm">{location.address}</p>
+                {location.phone && <p className="text-sm">Tel: {location.phone}</p>}
+              </div>
+            </Popup>
+          </Marker>
+        ))}
+        <ChangeMapView coordinates={center} />
+      </MapContainer>
+    </div>
   );
 }

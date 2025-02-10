@@ -1,3 +1,4 @@
+import DetailOrgTitle from "../../components/detail-org/detail-org-title";
 import BaseLayout from "../../layout/base-layout";
 import CloudinaryImg from "../../utils/helper/use-cloudinary-img";
 
@@ -20,12 +21,13 @@ export default function WiraAriandi() {
     >
       <div>
         <div className="relative flex flex-col items-center pb-32 pt-64 max-w-screen w-full lg:px-20 wira-ariandi-banner">
-          <span className="relative top-32 w-full text-center md:w-fit md:px-12 py-3 bg-gradient-to-l from-[#851111] to-[#EB1E1E] text-[42px] lg:text-[56px] font-semibold">
-            PT WIRA ARIANDI
-          </span>
+          <DetailOrgTitle title="PT WIRA ARIANDI"/>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
+          data-aos="fade-left"
+        >
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738778877/wira_ariandi_detail_1_hqj1dv.png"
             className="rounded-sm grow"
@@ -46,7 +48,10 @@ export default function WiraAriandi() {
           </div>
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-28 px-5 lg:px-20">
+        <div 
+          className="flex flex-col-reverse lg:flex-row justify-center items-center lg:space-x-20 py-24 lg:py-28 px-5 lg:px-20"
+          data-aos="fade-right"
+        >
           <div className="flex flex-col items-start text-start grow">
             <p className="text-5xl font-medium mb-6 leading-14">
               Layanan Perdagangan & Distribusi BBM
@@ -75,11 +80,14 @@ export default function WiraAriandi() {
           </div>
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738779344/wira_ariandi_detail_2_wjwtka.png"
-            className="rounded-sm grow"
+            className="rounded-sm grow mb-11 lg:mb-0"
           />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-28 lg:py-32 px-5 lg:px-20">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-28 lg:py-32 px-5 lg:px-20"
+          data-aos="fade-left"
+        >
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738779651/wira_ariandi_detail_3_kcmdey.png"
             className="rounded-sm grow"

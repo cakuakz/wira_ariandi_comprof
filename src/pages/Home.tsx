@@ -2,8 +2,11 @@ import CustomBadge from "../components/home/badge";
 import CloudinaryImg from "../utils/helper/use-cloudinary-img";
 import MainButton from "../components/home/home-button";
 import BaseLayout from "../layout/base-layout";
+import { useNavigate } from "react-router";
 
 export default function Home() {
+  const navigate = useNavigate()
+
   const missionCards = [
     {
       icon: <img src="/gas-station.svg" />,
@@ -30,24 +33,35 @@ export default function Home() {
     >
       <>
         <div className="pb-32 pt-64 max-w-screen w-full px-5 lg:px-20 home-banner">
-          <p className="text-[40px] font-semibold mb-6">
+          <p className="text-[40px] font-semibold mb-6 max-w-[600px]" data-aos="fade-right">
             Memenuhi Kebutuhan Masa Depan Secara Berkelanjutan
           </p>
-          <p className="text-lg leading-[150%] font-normal mb-10">
+          <p className="text-lg leading-[150%] font-normal mb-10 max-w-[672px]" data-aos="fade-right">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
             elementum tristique.
           </p>
-          <MainButton text="Selengkapnya" />
+          <MainButton 
+            text="Selengkapnya"
+            onClick={() => (
+              navigate("/organisasi")
+            )}
+            dataAos="fade-right"
+          />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
+          data-aos="fade-up"
+        >
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738596543/home_ship_1_dfemud.svg"
             className="rounded-sm"
           />
           <div className="flex flex-col items-start text-start">
-            <p className="text-5xl font-medium mb-6 leading-[120%]">Tentang Kami</p>
-            <p className="text-lg font-normal leading-[150%]">
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-[120%]">
+              Tentang Kami
+            </p>
+            <p className="text-lg font-normal leading-[150%] text-[#C1C1C1]">
               Kami merupakan perusahaan swasta nasional yang bergerak khusus dibidang perdagangan
               bahan bakar minyak industri yang mencakup seluruh wilayah Indonesia. Perusahaan ini
               telah berdiri sejak 27 Agustus 1997 dan telah memiliki Izin Usaha Niaga Umum (INU)
@@ -64,7 +78,10 @@ export default function Home() {
         <div className="mx-auto space-y-20 py-12 lg:py-28 px-5 lg:px-20">
           <div className="text-center space-y-6">
             <CustomBadge title="VISI" />
-            <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-lg md:text-xl lg:text-4xl max-w-5xl mx-auto leading-relaxed">
+            <p 
+              className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-lg md:text-xl lg:text-4xl max-w-5xl mx-auto leading-relaxed"
+              data-aos="zoom-in"
+            >
               Sebuah perusahaan yang mandiri, profesional, berkualitas serta berkomitmen terhadap
               pelanggan dan mitra kerja untuk suatu hasil yang maksimal dan menguntungkan
             </p>
@@ -79,6 +96,7 @@ export default function Home() {
                 <div
                   key={index}
                   className="bg-zinc-900/80 border border-zinc-800 rounded-lg p-4 w-full text-center space-y-4"
+                  data-aos="fade-up"
                 >
                   <div className="flex justify-center">{card.icon}</div>
                   <p className="text-sm md:text-xl">{card.text}</p>
@@ -109,7 +127,12 @@ export default function Home() {
               </p>
             </div>
             <div className="flex mt-10 lg:mt-0 justify-center md:justify-end w-full md:w-auto">
-              <MainButton text="Hubungi Kami" />
+              <MainButton 
+                text="Hubungi Kami"
+                onClick={() => {
+                  navigate("/kontak")
+                }}
+              />
             </div>
           </div>
         </div>

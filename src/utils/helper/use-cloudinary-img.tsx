@@ -1,6 +1,6 @@
 import { AdvancedImage } from "@cloudinary/react";
-import { cld } from "../../main";
 import { fill } from "@cloudinary/url-gen/actions/resize";
+import { cld } from "../../main";
 
 interface CloudinaryImgProps {
   src: string;

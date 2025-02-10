@@ -1,34 +1,38 @@
-import { ChartNoAxesCombined, Headphones, Handshake, BrainCircuit, Phone } from "lucide-react";
 import CustomBadge from "../../components/home/badge";
 import BaseLayout from "../../layout/base-layout";
 import CloudinaryImg from "../../utils/helper/use-cloudinary-img";
-import MainButton from "../../components/home/home-button";
-import SecondaryButton from "../../components/home/secondary-button";
 import EtamSegment from "../../components/detail-org/etam-segment";
 import { useState } from "react";
 import AwardsCarousel from "../../components/detail-org/award-carousel";
+import CustomButton from "../../components/home/custom-button";
+import NumberContainer from "../../components/number-container";
+import OfficeLocation from "../../components/detail-org/office-location";
+import DetailOrgTitle from "../../components/detail-org/detail-org-title";
+import { officeLocation } from "../../utils/static/etam-locations";
 
 export default function EtamWiraUtama() {
   const [segments, setSegments] = useState("retail");
+  const [office, setOffice] = useState("Kantor Pusat")
+  const locations = officeLocation.map((office) => office.location);
 
   const missionCards = [
     {
-      icon: <ChartNoAxesCombined className="size-11 stroke-[#D43D3D] stroke-2" />,
+      icon: <img src="/etam_wira_utama/arrow-growth.svg" />,
       title: "Inovasi Berkelanjutan",
       text: "Perusahaan trading BBM dan Transportir multi nasional di Indonesia",
     },
     {
-      icon: <Headphones className="size-11 stroke-[#D43D3D] stroke-2" />,
+      icon: <img src="/etam_wira_utama/customer-service-twotone.svg" />,
       title: "Pelayanan Terbaik",
       text: "Membantu pelanggan dalam meningkatkan kinerja dan keuntungan",
     },
     {
-      icon: <Handshake className="size-11 stroke-[#D43D3D] stroke-2" />,
+      icon: <img src="/etam_wira_utama/mdi_partnership_new.svg" />,
       title: "Tanggung Jawab Sosial & Lingkungan",
       text: "Mengembangkan pelayanan pelanggan/ mitra kerja",
     },
     {
-      icon: <BrainCircuit className="size-11 stroke-[#D43D3D] stroke-2" />,
+      icon: <img src="/etam_wira_utama/brain-sparkle-20-filled.svg" />,
       title: "Pengembangan Sumber Daya Manusia",
       text: "Meningkatkan profesional SDM perusahaan menjadi lebih berkualitas",
     },
@@ -109,12 +113,13 @@ export default function EtamWiraUtama() {
     >
       <div>
         <div className="relative flex flex-col items-center pb-32 pt-64 max-w-screen w-full lg:px-20 etam-wira-banner">
-          <span className="relative top-32 w-full text-center md:w-fit md:px-12 py-3 bg-gradient-to-l from-[#851111] to-[#EB1E1E] text-[42px] lg:text-[56px] font-semibold">
-            PT ETAM WIRA UTAMA
-          </span>
+          <DetailOrgTitle title="PT ETAM WIRA UTAMA" />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
+          data-aos="fade-left"
+        >
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1739109720/pt_etam_wira_detail_1_ghgnfb.png"
             className="rounded-sm grow"
@@ -136,7 +141,10 @@ export default function EtamWiraUtama() {
         <div className="mx-auto space-y-24 py-12 lg:py-28 px-5 lg:px-20">
           <div className="text-center space-y-6">
             <CustomBadge title="VISI" />
-            <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-lg md:text-xl lg:text-4xl max-w-5xl mx-auto leading-relaxed">
+            <p 
+              className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-lg md:text-xl lg:text-4xl max-w-5xl mx-auto leading-relaxed"
+              data-aos="zoom-in"
+            >
               Menjadi perusahaan terbaik dibidang Distribusi dan pelayanan yang berdampak positif
               bagi masyarakat dan lingkungan sekitar pada tahun 2030
             </p>
@@ -148,7 +156,7 @@ export default function EtamWiraUtama() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
               {missionCards.map((card, index) => (
-                <div key={index} className="p-4 w-full text-start">
+                <div key={index} className="p-4 w-full text-start" data-aos="fade-up">
                   <div className="flex justify-start mb-6">{card.icon}</div>
                   <h1 className="text-xl font-semibold max-h-12 h-full">{card.title}</h1>
                   <p className="pt-6 text-sm md:text-base">{card.text}</p>
@@ -168,9 +176,7 @@ export default function EtamWiraUtama() {
                   {values.slice(0, 3).map((value) => (
                     <div key={value.number} className="relative max-w-[404px] w-full">
                       <div className="flex items-start gap-4 p-4">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-800 flex items-center justify-center">
-                          <span className="text-white font-medium">{value.number}</span>
-                        </div>
+                        <NumberContainer number={value.number} />
                         <div className="space-y-2">
                           <h3 className="text-xl font-medium flex items-center gap-2">
                             {value.title}
@@ -186,9 +192,7 @@ export default function EtamWiraUtama() {
                   {values.slice(3).map((value) => (
                     <div key={value.number} className="relative max-w-[404px] w-full">
                       <div className="flex items-start gap-4 p-4">
-                        <div className="flex-shrink-0 w-8 h-8 rounded-full bg-red-800 flex items-center justify-center">
-                          <span className="text-white font-medium">{value.number}</span>
-                        </div>
+                        <NumberContainer number={value.number} />
                         <div className="space-y-2">
                           <h3 className="text-xl font-medium flex items-center gap-2">
                             {value.title}
@@ -204,27 +208,31 @@ export default function EtamWiraUtama() {
           </div>
         </div>
 
-        <div className="flex flex-col items-center space-y-8 lg:space-y-20 py-24 lg:py-28 px-5 lg:px-20">
-          <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl mx-auto leading-relaxed">
+        <div className="flex flex-col items-center space-y-8 lg:space-y-20 py-24 lg:py-28 px-5 lg:px-20" data-aos="fade-up">
+          <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] font-medium text-4xl lg:text-5xl leading-relaxed">
             Coverage Area
           </p>
           <div className="w-full flex flex-col lg:flex-row lg:justify-center items-center space-x-0 space-y-6 lg:space-y-0 lg:space-x-11">
-            <MainButton
+            <CustomButton
               text="Segmen Retail"
               className="w-full lg:w-fit"
               onClick={() => setSegments("retail")}
+              isActive={Boolean(segments === "retail")}
             />
-            <SecondaryButton
+            <CustomButton
               text="Segmen Industri"
               className="w-full lg:w-fit"
               onClick={() => setSegments("industri")}
+              isActive={Boolean(segments === "industri")}
             />
           </div>
           <EtamSegment segment={segments} />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20">
-          <div className="flex flex-col items-start text-start grow">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
+        >
+          <div className="flex flex-col items-start text-start grow" data-aos="fade-right">
             <p className="text-5xl font-medium mb-6 leading-14">Ketersediaan Sumber Daya</p>
             <p className="text-lg font-normal leading-[150%]">
               PT Etam Wira Utama memastikan ketersediaan sumber daya baika secara personal karyawan
@@ -240,12 +248,15 @@ export default function EtamWiraUtama() {
           />
         </div>
 
-        <div className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20">
+        <div 
+          className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
+          
+        >
           <CloudinaryImg
             src="https://res.cloudinary.com/rafirfansyah/image/upload/v1739109720/pt_etam_wira_core_business_ujhl3h.png"
             className="rounded-sm grow"
           />
-          <div className="flex flex-col items-start text-start grow">
+          <div className="flex flex-col items-start text-start grow" data-aos="fade-left">
             <p className="text-5xl font-medium mb-6 leading-14">Core Business</p>
             <p className="text-lg font-normal leading-[150%]">
               Core business PT Etam Wira Utama selalu memperkuat posisi perusahaan di pasar pelumas,
@@ -278,34 +289,23 @@ export default function EtamWiraUtama() {
           <AwardsCarousel />
         </div>
 
-        <div className="flex flex-col space-y-20 py-24 lg:py-28 px-5 lg:px-20">
-          <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl leading-relaxed">
+        <div 
+          className="flex flex-col space-y-20 py-24 lg:py-28 px-5 lg:px-20"
+        >
+          <p className="text-transparent text-center lg:text-start bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl leading-relaxed">
             Lokasi Kantor Kami
           </p>
           <div className="flex flex-col space-y-11 w-full">
-            <div className="flex flex-col lg:flex-row space-x-0 lg:space-x-11">
-                <MainButton text="Kantor Pusat" />
-                <SecondaryButton text="Kantor Cabang Berau" />
-                <SecondaryButton text="Kantor Representatif Tg. Selor" />
-                <SecondaryButton text="Kantor Representatif Nunukan" />
-            </div>
-            <div className="flex flex-col lg:flex-row items-center lg:justify-between space-x-0 lg:space-x-20">
-                <div className="flex flex-col space-y-4">
-                    <p className="font-bold text-2xl">Kantor Pusat</p>
-                    <div>
-                        <p className="font-medium text-base text-[#E2E2E2]">Address:  Jln Sulawesi RT. 18 No.43 Kaltara</p>
-                        <p className="font-medium text-base text-[#E2E2E2]">Email : etamwirautama@gmail.com</p>
-                    </div>
-                    <div className="flex items-center space-x-6">
-                        <Phone />
-                        <p className="font-medium text-base text-[#E2E2E2]">Telp. (0551)-23011</p>
-                    </div>
-                </div>
-                <CloudinaryImg 
-                    src="https://res.cloudinary.com/rafirfansyah/image/upload/v1739128632/etam_wira_kantor_utama_kle7jb.png"
-                    className="rounded max-w-[624px] w-full"
+            <div className="flex flex-col lg:flex-row space-y-6 space-x-0 lg:space-x-11 lg:space-y-0">
+              {locations.map((location) => (
+                <CustomButton 
+                  text={location}
+                  onClick={() => setOffice(location)}
+                  isActive={Boolean(location === office)}
                 />
+              ))}
             </div>
+            <OfficeLocation location={office}/>
           </div>
         </div>
       </div>

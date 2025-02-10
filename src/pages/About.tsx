@@ -70,7 +70,7 @@ export default function About() {
     >
       <div className="relative flex flex-col max-w-screen">
         <div className="flex flex-col items-center text-center pt-64 pb-32 max-w-screen w-full px-5 lg:px-20 about-banner">
-          <div className="max-w-3xl w-full">
+          <div className="max-w-3xl w-full" data-aos="fade-up">
             <p className="text-[40px] font-semibold mb-6">Struktur dan Anak Perusahaan</p>
             <p className="text-lg leading-[150%] font-normal mb-10">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
@@ -81,7 +81,7 @@ export default function About() {
         </div>
 
         <div className="text-center mx-auto px-5 py-24 lg:px-20 lg:py-28">
-          <div className="text-center mb-16">
+          <div className="text-center mb-16" data-aos="fade-left">
             <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl max-w-5xl mx-auto leading-relaxed">
               Struktur Organisasi
             </p>
@@ -92,7 +92,7 @@ export default function About() {
             {/* Row 1 - 2 people */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
               {teamPict[0].map((member, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center" data-aos="fade-up">
                   <div className="aspect-square overflow-hidden rounded-lg mb-4">
                     <img
                       src={member.image || "/placeholder.svg"}
@@ -109,7 +109,7 @@ export default function About() {
             {/* Row 2 - 3 people */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {teamPict[1].map((member, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center" data-aos="fade-up">
                   <div className="aspect-square overflow-hidden rounded-lg mb-4">
                     <img
                       src={member.image || "/placeholder.svg"}
@@ -126,7 +126,7 @@ export default function About() {
             {/* Row 3 - 4 people */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {teamPict[2].map((member, index) => (
-                <div key={index} className="text-center">
+                <div key={index} className="text-center" data-aos="fade-up">
                   <div className="aspect-square overflow-hidden rounded-lg mb-4">
                     <img
                       src={member.image || "/placeholder.svg"}
@@ -153,7 +153,7 @@ export default function About() {
         </div>
 
         <div className="mt-20 flex flex-col lg:flex-row items-center mx-auto space-y-11 lg:space-y-0 lg:space-x-8 px-5 lg:px-20">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center" data-aos="fade-right">
             <CloudinaryImg src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738773377/wira_ariandi_placeholder_dzucqt.png" />
             <div className="pt-8 flex flex-col items-center text-center">
               <p className="text-4xl font-bold mb-3">PT Wira Ariandi</p>
@@ -166,7 +166,7 @@ export default function About() {
               />
             </div>
           </div>
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center" data-aos="fade-left">
             <CloudinaryImg src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738780564/wira_ariandi_utama_placeholder_c0fnfm.png" />
             <div className="pt-8 flex flex-col items-center text-center">
               <p className="text-4xl font-bold mb-3">PT Wira Ariandi Utama</p>
@@ -182,7 +182,7 @@ export default function About() {
         </div>
 
         <div className="mt-11 lg:mt-20 flex items-center mx-auto pb-28 px-5">
-          <div className="flex flex-col items-center">
+          <div className="flex flex-col items-center" data-aos="fade-right">
             <CloudinaryImg src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738773377/wira_ariandi_placeholder_dzucqt.png" />
             <div className="pt-8 flex flex-col items-center text-center">
               <p className="text-4xl font-bold mb-3">PT Etam Wira Utama</p>
