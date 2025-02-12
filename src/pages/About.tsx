@@ -71,7 +71,7 @@ export default function About() {
       <div className="relative flex flex-col max-w-screen">
         <div className="flex flex-col items-center text-center pt-64 pb-32 max-w-screen w-full px-5 lg:px-20 about-banner">
           <div className="max-w-3xl w-full" data-aos="fade-up">
-            <p className="text-[40px] font-semibold mb-6">Struktur dan Anak Perusahaan</p>
+            <h1 className="text-[40px] font-semibold mb-6">Struktur dan Anak Perusahaan</h1>
             <p className="text-lg leading-[150%] font-normal mb-10">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
               eros elementum tristique.
@@ -82,9 +82,9 @@ export default function About() {
 
         <div className="text-center mx-auto px-5 py-24 lg:px-20 lg:py-28">
           <div className="text-center mb-16" data-aos="fade-left">
-            <p className="radial_sub_title max-w-5xl">
+            <h2 className="radial_sub_title max-w-5xl">
               Struktur Organisasi
-            </p>
+            </h2>
             <p className="text-gray-400">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -145,9 +145,9 @@ export default function About() {
         </div>
 
         <div className="flex flex-col items-center text-center pt-28 space-y-6 px-5">
-          <p className="radial_sub_title max-w-5xl">
+          <h2 className="radial_sub_title max-w-5xl">
             Anak Perusahaan
-          </p>
+          </h2>
           <p className="max-w-2xl text-lg font-normal">
             PT Wira Ariandi Group memiliki dua anak perusahaan yang bergerak di bidang perdagangan
             BBM
@@ -158,7 +158,7 @@ export default function About() {
           <div className="flex flex-col items-center" data-aos="fade-right">
             <CloudinaryImg src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738773377/wira_ariandi_placeholder_dzucqt.png" />
             <div className="pt-8 flex flex-col items-center text-center">
-              <p className="text-4xl font-bold mb-3">PT Wira Ariandi</p>
+              <h3 className="text-4xl font-bold mb-3">PT Wira Ariandi</h3>
               <p className="text-lg font-normal mb-6">Trading BBM</p>
               <MainButton
                 text="Lihat Lebih Detail"
@@ -171,7 +171,7 @@ export default function About() {
           <div className="flex flex-col items-center" data-aos="fade-left">
             <CloudinaryImg src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738780564/wira_ariandi_utama_placeholder_c0fnfm.png" />
             <div className="pt-8 flex flex-col items-center text-center">
-              <p className="text-4xl font-bold mb-3">PT Wira Ariandi Utama</p>
+              <h3 className="text-4xl font-bold mb-3">PT Wira Ariandi Utama</h3>
               <p className="text-lg font-normal mb-6">Transport BBM</p>
               <MainButton
                 text="Lihat Lebih Detail"
@@ -187,7 +187,7 @@ export default function About() {
           <div className="flex flex-col items-center" data-aos="fade-right">
             <CloudinaryImg src="https://res.cloudinary.com/rafirfansyah/image/upload/v1738773377/wira_ariandi_placeholder_dzucqt.png" />
             <div className="pt-8 flex flex-col items-center text-center">
-              <p className="text-4xl font-bold mb-3">PT Etam Wira Utama</p>
+              <h3 className="text-4xl font-bold mb-3">PT Etam Wira Utama</h3>
               <p className="text-lg font-normal mb-6">Trading BBM</p>
               <MainButton
                 text="Lihat Lebih Detail"

@@ -23,9 +23,9 @@ export default function Contact() {
           className="mt-24 mb-14 lg:mb-20"
           data-aos="fade-right"
         >
-          <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] font-medium text-4xl lg:text-5xl leading-relaxed">
+          <h1 className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] font-medium text-4xl lg:text-5xl leading-relaxed">
             Hubungi Kami
-          </p>
+          </h1>
         </div>
         <div className="flex flex-col lg:flex-row items-start justify-between space-y-20 lg:space-y-0">
           <div className="space-y-8" data-aos="fade-right">

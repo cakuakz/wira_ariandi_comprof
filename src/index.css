@@ -23,7 +23,7 @@
 
 #map { height: 180px; }
 
-p.radial_sub_title {
+.radial_sub_title {
   @apply text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl mx-auto leading-relaxed
 }
 

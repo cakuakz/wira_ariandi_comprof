@@ -33,9 +33,9 @@ export default function Home() {
     >
       <>
         <div className="pb-32 pt-64 max-w-screen w-full px-5 lg:px-20 home-banner">
-          <p className="text-[40px] font-semibold mb-6 max-w-[600px]" data-aos="fade-right">
+          <h1 className="text-[40px] font-semibold mb-6 max-w-[600px]" data-aos="fade-right">
             Memenuhi Kebutuhan Masa Depan Secara Berkelanjutan
-          </p>
+          </h1>
           <p className="text-lg leading-[150%] font-normal mb-10 max-w-[672px]" data-aos="fade-right">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
             elementum tristique.
@@ -58,9 +58,9 @@ export default function Home() {
             className="rounded-sm"
           />
           <div className="flex flex-col items-start text-start">
-            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-[120%]">
+            <h2 className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-[120%]">
               Tentang Kami
-            </p>
+            </h2>
             <p className="text-lg font-normal leading-[150%] text-[#C1C1C1]">
               Kami merupakan perusahaan swasta nasional yang bergerak khusus dibidang perdagangan
               bahan bakar minyak industri yang mencakup seluruh wilayah Indonesia. Perusahaan ini
