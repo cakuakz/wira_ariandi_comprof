@@ -107,7 +107,7 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col space-y-20 items-center py-12 lg:py-28 px-5 lg:px-20">
-          <p className="max-w-3xl text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl mx-auto leading-relaxed text-center">
+          <p className="max-w-3xl radial_sub_title text-center">
             Layanan Kami Menjangkau Seluruh Indonesia dengan Dedikasi Terbaik
           </p>
           <div className="max-w-4xl">

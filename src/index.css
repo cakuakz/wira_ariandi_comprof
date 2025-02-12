@@ -23,6 +23,10 @@
 
 #map { height: 180px; }
 
+p.radial_sub_title {
+  @apply text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl mx-auto leading-relaxed
+}
+
 .badge-drop-shadow {
   @apply drop-shadow-[0px_6px_18px_rgba(255,52,33,0.3)]
 }

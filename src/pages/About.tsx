@@ -10,12 +10,12 @@ export default function About() {
     // Row 1
     [
       {
-        image: "/org_person_topright.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
       {
-        image: "/org_person_topleft.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
@@ -23,17 +23,17 @@ export default function About() {
     // Row 2
     [
       {
-        image: "/org_person_midright.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
       {
-        image: "/org_person_midmiddle.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
       {
-        image: "/org_person_midleft.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
@@ -41,27 +41,27 @@ export default function About() {
     // Row 3
     [
       {
-        image: "/org_person_botright.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
       {
-        image: "/org_person_botslightright.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
       {
-        image: "/org_person_botslightleft.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
       {
-        image: "/org_person_botleft.svg",
+        image: "/org_prof_pict.svg",
         name: "Full name",
         title: "Job title",
       },
     ],
-  ]
+  ];
 
   return (
     <BaseLayout
@@ -82,10 +82,12 @@ export default function About() {
 
         <div className="text-center mx-auto px-5 py-24 lg:px-20 lg:py-28">
           <div className="text-center mb-16" data-aos="fade-left">
-            <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl max-w-5xl mx-auto leading-relaxed">
+            <p className="radial_sub_title max-w-5xl">
               Struktur Organisasi
             </p>
-            <p className="text-gray-400">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            <p className="text-gray-400">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
           </div>
 
           <div className="space-y-16">
@@ -143,7 +145,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col items-center text-center pt-28 space-y-6 px-5">
-          <p className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-4xl lg:text-5xl max-w-5xl mx-auto leading-relaxed">
+          <p className="radial_sub_title max-w-5xl">
             Anak Perusahaan
           </p>
           <p className="max-w-2xl text-lg font-normal">
@@ -187,10 +189,10 @@ export default function About() {
             <div className="pt-8 flex flex-col items-center text-center">
               <p className="text-4xl font-bold mb-3">PT Etam Wira Utama</p>
               <p className="text-lg font-normal mb-6">Trading BBM</p>
-              <MainButton 
+              <MainButton
                 text="Lihat Lebih Detail"
                 onClick={() => {
-                  navigate("/organisasi/pt-etam-wira-utama")
+                  navigate("/organisasi/pt-etam-wira-utama");
                 }}
               />
             </div>

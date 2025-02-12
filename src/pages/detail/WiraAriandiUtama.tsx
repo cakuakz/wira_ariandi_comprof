@@ -42,7 +42,7 @@ export default function WiraAriandiUtama() {
           <DetailOrgTitle title="PT WIRA ARIANDI UTAMA" />
         </div>
 
-        <div 
+        <div
           className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
           data-aos="fade-left"
         >
@@ -51,7 +51,9 @@ export default function WiraAriandiUtama() {
             className="rounded-sm grow"
           />
           <div className="flex flex-col items-start text-start grow">
-            <p className="text-5xl font-medium mb-6 leading-14">Tentang Perusahaan</p>
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-14">
+              Tentang Perusahaan
+            </p>
             <p className="text-lg font-normal leading-[150%]">
               PT Wira Ariandi Utama merupakan perusajaam jasa trasnportasi angkutan laut, angkutan
               darat, bunker yang berkantor pusat di Tarakan dan memiliki kantor cabang di Berau dan
@@ -73,7 +75,7 @@ export default function WiraAriandiUtama() {
           </div>
         </div>
 
-        <div 
+        <div
           className="flex flex-col items-center space-y-8 lg:space-y-0 py-24 lg:py-28 px-5"
           data-aos="fade-up"
         >
@@ -91,7 +93,7 @@ export default function WiraAriandiUtama() {
           />
         </div>
 
-        <div 
+        <div
           className="flex flex-col items-center space-y-8 lg:space-y-0 py-24 lg:py-28 px-5"
           data-aos="fade-up"
         >

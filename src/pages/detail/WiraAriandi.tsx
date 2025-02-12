@@ -33,7 +33,9 @@ export default function WiraAriandi() {
             className="rounded-sm grow"
           />
           <div className="flex flex-col items-start text-start grow">
-            <p className="text-5xl font-medium mb-6 leading-14">Tentang Perusahaan</p>
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-14">
+              Tentang Perusahaan
+            </p>
             <p className="text-lg font-normal leading-[150%]">
               Kami merupakan perusahaan swasta nasional yang bergerak khusus dibidang perdagangan
               bahan bakar minyak industri yang mencakup seluruh wilayah Indonesia. Perusahaan ini
@@ -53,7 +55,7 @@ export default function WiraAriandi() {
           data-aos="fade-right"
         >
           <div className="flex flex-col items-start text-start grow">
-            <p className="text-5xl font-medium mb-6 leading-14">
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-14">
               Layanan Perdagangan & Distribusi BBM
             </p>
             <p className="text-lg font-normal leading-[150%] mb-8">
@@ -93,7 +95,9 @@ export default function WiraAriandi() {
             className="rounded-sm grow"
           />
           <div className="flex flex-col items-start text-start grow">
-            <p className="text-5xl font-medium mb-6 leading-14">Layanan Bunker</p>
+            <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] text-5xl font-medium mb-6 leading-14">
+              Layanan Bunker
+            </p>
             <p className="text-lg font-normal leading-[150%]">
               Service Bunker merupakan proses pemuatan minyak dari kapal ke kapal. Pemuatan ini
               sesuai dengan prosedur dan standar. Dari pelabuhan atau STS (Ship to Ship) dari kapal

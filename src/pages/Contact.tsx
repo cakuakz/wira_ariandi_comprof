@@ -19,13 +19,16 @@ export default function Contact() {
       description="Profile of PT Wira Ariandi Group"
     >
       <div className="flex flex-col px-5 py-20 lg:px-20 lg:pb-28 lg:pt-40">
-        <div className="mt-24 mb-14 lg:mb-20">
+        <div 
+          className="mt-24 mb-14 lg:mb-20"
+          data-aos="fade-right"
+        >
           <p className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4F4F4] to-[#6A6A6A] font-medium text-4xl lg:text-5xl leading-relaxed">
             Hubungi Kami
           </p>
         </div>
         <div className="flex flex-col lg:flex-row items-start justify-between space-y-20 lg:space-y-0">
-          <div className="space-y-8">
+          <div className="space-y-8" data-aos="fade-right">
             {locations.map((location) => (
               <div
                 key={location.name}
