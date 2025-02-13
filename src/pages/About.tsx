@@ -73,8 +73,8 @@ export default function About() {
           <div className="max-w-3xl w-full" data-aos="fade-up">
             <h1 className="text-[40px] font-semibold mb-6">Struktur dan Anak Perusahaan</h1>
             <p className="text-lg leading-[150%] font-normal mb-10">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in
-              eros elementum tristique.
+              PT Wira Ariandi Group memiliki struktur keorganisasian dan dua anak perusahaan yang
+              beroperasi di berbagai daerah di Indonesia
             </p>
             <MainButton text="Selengkapnya" />
           </div>
@@ -82,11 +82,9 @@ export default function About() {
 
         <div className="text-center mx-auto px-5 py-24 lg:px-20 lg:py-28">
           <div className="text-center mb-16" data-aos="fade-left">
-            <h2 className="radial_sub_title max-w-5xl">
-              Struktur Organisasi
-            </h2>
+            <h2 className="radial_sub_title max-w-5xl">Struktur Organisasi</h2>
             <p className="text-gray-400">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Struktur Organisasi Perusahaan yang Mendukung Operasi Transportasi BBM
             </p>
           </div>
 
@@ -145,9 +143,7 @@ export default function About() {
         </div>
 
         <div className="flex flex-col items-center text-center pt-28 space-y-6 px-5">
-          <h2 className="radial_sub_title max-w-5xl">
-            Anak Perusahaan
-          </h2>
+          <h2 className="radial_sub_title max-w-5xl">Anak Perusahaan</h2>
           <p className="max-w-2xl text-lg font-normal">
             PT Wira Ariandi Group memiliki dua anak perusahaan yang bergerak di bidang perdagangan
             BBM

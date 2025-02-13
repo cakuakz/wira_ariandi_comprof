@@ -5,7 +5,7 @@ import BaseLayout from "../layout/base-layout";
 import { useNavigate } from "react-router";
 
 export default function Home() {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const missionCards = [
     {
@@ -36,20 +36,20 @@ export default function Home() {
           <h1 className="text-[40px] font-semibold mb-6 max-w-[600px]" data-aos="fade-right">
             Memenuhi Kebutuhan Masa Depan Secara Berkelanjutan
           </h1>
-          <p className="text-lg leading-[150%] font-normal mb-10 max-w-[672px]" data-aos="fade-right">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros
-            elementum tristique.
+          <p
+            className="text-lg leading-[150%] font-normal mb-10 max-w-[672px]"
+            data-aos="fade-right"
+          >
+            Mengoptimalkan transportasi BBM untuk efisiensi dan keberlanjutan
           </p>
-          <MainButton 
+          <MainButton
             text="Selengkapnya"
-            onClick={() => (
-              navigate("/organisasi")
-            )}
+            onClick={() => navigate("/organisasi")}
             dataAos="fade-right"
           />
         </div>
 
-        <div 
+        <div
           className="flex flex-col lg:flex-row justify-center items-center space-y-8 lg:space-y-0 lg:space-x-20 py-24 lg:py-32 px-5 lg:px-20"
           data-aos="fade-up"
         >
@@ -78,7 +78,7 @@ export default function Home() {
         <div className="mx-auto space-y-20 py-12 lg:py-28 px-5 lg:px-20">
           <div className="text-center space-y-6">
             <CustomBadge title="VISI" />
-            <p 
+            <p
               className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-lg md:text-xl lg:text-4xl max-w-5xl mx-auto leading-relaxed"
               data-aos="zoom-in"
             >
@@ -127,10 +127,10 @@ export default function Home() {
               </p>
             </div>
             <div className="flex mt-10 lg:mt-0 justify-center md:justify-end w-full md:w-auto">
-              <MainButton 
+              <MainButton
                 text="Hubungi Kami"
                 onClick={() => {
-                  navigate("/kontak")
+                  navigate("/kontak");
                 }}
               />
             </div>
