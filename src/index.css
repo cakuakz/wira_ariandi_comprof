@@ -14,13 +14,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #0E0E0E;
-  }
-}
-
 #map { height: 180px; }
 
 .radial_sub_title {
