@@ -11,54 +11,26 @@ export default function About() {
     [
       {
         image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
-      },
-      {
-        image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
+        name: "Danu Saputro",
+        title: "Direktur Utama",
       },
     ],
     // Row 2
     [
       {
         image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
+        name: "Arie Priangga P.",
+        title: "Wakil Direktur 1",
       },
       {
         image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
+        name: "Donny Wira A.",
+        title: "Wakil Direktur 2",
       },
       {
         image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
-      },
-    ],
-    // Row 3
-    [
-      {
-        image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
-      },
-      {
-        image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
-      },
-      {
-        image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
-      },
-      {
-        image: "/org_prof_pict.svg",
-        name: "Full name",
-        title: "Job title",
+        name: "Yudi Normandi",
+        title: "Wakil Direktur 3",
       },
     ],
   ];
@@ -90,7 +62,7 @@ export default function About() {
 
           <div className="space-y-16">
             {/* Row 1 - 2 people */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-3xl mx-auto">
+            <div className="grid grid-cols-1 gap-8 sm:max-w-[298px] mx-auto">
               {teamPict[0].map((member, index) => (
                 <div key={index} className="text-center" data-aos="fade-up">
                   <div className="aspect-square overflow-hidden rounded-lg mb-4">
@@ -109,23 +81,6 @@ export default function About() {
             {/* Row 2 - 3 people */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
               {teamPict[1].map((member, index) => (
-                <div key={index} className="text-center" data-aos="fade-up">
-                  <div className="aspect-square overflow-hidden rounded-lg mb-4">
-                    <img
-                      src={member.image || "/placeholder.svg"}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h3 className="text-xl font-medium">{member.name}</h3>
-                  <p className="text-gray-400">{member.title}</p>
-                </div>
-              ))}
-            </div>
-
-            {/* Row 3 - 4 people */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-              {teamPict[2].map((member, index) => (
                 <div key={index} className="text-center" data-aos="fade-up">
                   <div className="aspect-square overflow-hidden rounded-lg mb-4">
                     <img
