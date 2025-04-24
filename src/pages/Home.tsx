@@ -9,20 +9,24 @@ export default function Home() {
 
   const missionCards = [
     {
-      icon: <img src="/gas-station.svg" />,
-      text: "Perusahaan trading BBM dan Transportir multi nasional di Indonesia",
+      icon: <img src="/gas-station-new.svg" className="size-11" />,
+      text: "Menyediakan solusi supply dan distribusi energi yang aman, andal, dan tepat waktu",
     },
     {
-      icon: <img src="/dollar-circle.svg" />,
-      text: "Membantu pelanggan dalam meningkatkan kinerja dan keuntungan",
+      icon: <img src="/ship-icon.svg" className="size-11" />,
+      text: "Mendukung kebutuhan industri nasional melalui pengelolaan logistik energi yang profesional",
     },
     {
-      icon: <img src="/mdi_partnership.svg" />,
-      text: "Mengembangkan pelayanan pelanggan/ mitra kerja",
+      icon: <img src="/globe-icon.svg" className="size-11" />,
+      text: "Memperluas jaringan distribusi dengan standar global untuk menjangkau pasar internasional",
     },
     {
-      icon: <img src="/fluent_brain.svg" />,
-      text: "Meningkatkan profesional SDM perusahaan menjadi lebih berkualitas",
+      icon: <img src="/mdi_partnership.svg" className="size-11" />,
+      text: "Menjaga integritas dan kepercayaan pelanggan melalui layanan yang transparan dan berkualitas tinggi",
+    },
+    {
+      icon: <img src="/solid-fist.svg" className="size-11" />,
+      text: "Mengedepankan nilai nasionalisme dalam setiap langkah bisnis untuk mendorong pertumbuhan ekonomi Indonesia",
     },
   ];
 
@@ -33,15 +37,12 @@ export default function Home() {
     >
       <>
         <div className="pb-32 pt-64 max-w-screen w-full px-5 lg:px-20 home-banner">
-          <h1 className="text-[40px] font-semibold mb-6 max-w-[600px]" data-aos="fade-right">
-            Memenuhi Kebutuhan Masa Depan Secara Berkelanjutan
-          </h1>
-          <p
-            className="text-lg leading-[150%] font-normal mb-10 max-w-[672px]"
+          <h1
+            className="text-[40px] md:text-[64px] font-semibold mb-6 max-w-[800px]"
             data-aos="fade-right"
           >
-            Mengoptimalkan transportasi BBM untuk efisiensi dan keberlanjutan
-          </p>
+            Distributing Energy, Empowering the Nation, Reaching the World
+          </h1>
           <MainButton
             text="Selengkapnya"
             onClick={() => navigate("/organisasi")}
@@ -62,15 +63,22 @@ export default function Home() {
               Tentang Kami
             </h2>
             <p className="text-lg font-normal leading-[150%] text-[#C1C1C1]">
-              Kami merupakan perusahaan swasta nasional yang bergerak khusus dibidang perdagangan
-              bahan bakar minyak industri yang mencakup seluruh wilayah Indonesia. Perusahaan ini
-              telah berdiri sejak 27 Agustus 1997 dan telah memiliki Izin Usaha Niaga Umum (INU)
-              dari BPH Migas.
+              Wira Ariandi Group adalah perusahaan penyedia dan distribusi energi yang berdedikasi
+              dalam mendukung kebutuhan industri melalui layanan supply dan transportasi oil & gas.
+              Kami hadir sebagai mitra terpercaya dalam menjaga kelancaran rantai pasok energi —
+              dari sumber terbaik hingga ke tangan pelanggan — dengan mengutamakan keandalan,
+              keamanan, dan ketepatan waktu.
               <br />
               <br />
-              PT Wira Ariandi telah melayani pelanggan diseluruh wilayah Indonesia. Perusahaan Kami
-              bekerja sesuai target yang ditetapkan pelanggan demi menjamin kinerja operasional
-              pelanggan. Tepat waktu dan akurat adalah satu bagian terpenting dari misi kami.
+              Sejak berdiri, Wira Ariandi Group terus berkomitmen memperkuat peran dalam mendukung
+              pertumbuhan ekonomi nasional sekaligus memperluas jaringan distribusi ke pasar global.
+              Dengan infrastruktur yang terintegrasi, armada transportasi yang handal, serta sumber
+              daya manusia berpengalaman, kami memastikan setiap proses berjalan sesuai standar
+              keselamatan dan kualitas internasional.
+              <br />
+              <br />
+              Di tengah dinamika kebutuhan energi dunia, kami percaya bahwa kolaborasi, inovasi, dan
+              dedikasi adalah kunci untuk menghadirkan solusi terbaik bagi mitra dan bangsa.
             </p>
           </div>
         </div>
@@ -82,8 +90,9 @@ export default function Home() {
               className="text-transparent bg-clip-text bg-[radial-gradient(circle_at_center,_#F9F9F9_0%,_#6A6A6A_100%)] font-semibold text-lg md:text-xl lg:text-4xl max-w-5xl mx-auto leading-relaxed"
               data-aos="zoom-in"
             >
-              Sebuah perusahaan yang mandiri, profesional, berkualitas serta berkomitmen terhadap
-              pelanggan dan mitra kerja untuk suatu hasil yang maksimal dan menguntungkan
+              Menjadi perusahaan supply dan distribusi energi kelas dunia yang mendukung pertumbuhan
+              ekonomi nasional, memperkuat konektivitas global, dan menjadi mitra strategis dalam
+              mewujudkan ketahanan energi
             </p>
           </div>
 
@@ -91,17 +100,37 @@ export default function Home() {
             <div className="text-center">
               <CustomBadge title="MISI" />
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 w-full">
-              {missionCards.map((card, index) => (
-                <div
-                  key={index}
-                  className="bg-zinc-900/80 border border-zinc-800 rounded-lg p-4 w-full text-center space-y-4"
-                  data-aos="fade-up"
-                >
-                  <div className="flex justify-center">{card.icon}</div>
-                  <p className="text-sm md:text-xl">{card.text}</p>
-                </div>
-              ))}
+
+            {/* First grid: up to 3 items */}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {missionCards.slice(0, 3).map((card, index) => (
+                  <div
+                    key={index}
+                    className="bg-zinc-900/80 border border-zinc-800 rounded-lg p-4 text-center space-y-4 max-w-[330px] w-full"
+                    data-aos="fade-up"
+                  >
+                    <div className="flex justify-center">{card.icon}</div>
+                    <p className="text-sm md:text-xl">{card.text}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            {/* Second grid: next 2 or 3 items, centered */}
+            <div className="flex justify-center">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {missionCards.slice(3, 6).map((card, index) => (
+                  <div
+                    key={index}
+                    className="bg-zinc-900/80 border border-zinc-800 rounded-lg p-4 text-center space-y-4 max-w-[330px] w-full"
+                    data-aos="fade-up"
+                  >
+                    <div className="flex justify-center">{card.icon}</div>
+                    <p className="text-sm md:text-xl">{card.text}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>

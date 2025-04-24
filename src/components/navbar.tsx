@@ -13,22 +13,31 @@ export default function Navbar() {
         isOpen ? "bg-background" : "bg-transparent"
       }`}
     >
-      <div className="py-6 px-5 lg:px-20 flex items-center justify-between">
-        <NavLink to="/" onClick={close}>
+      <div className="relative py-6 px-5 lg:px-20 flex items-center justify-between">
+        {/* Logo + Text */}
+        <NavLink
+          className="flex items-center space-x-3"
+          to="/"
+          onClick={close}
+        >
           <img
             loading="lazy"
             src="/Wira_Ariandi_Utama_logo.svg"
-            className="size-16 lg:size-20"
+            className="size-18 lg:size-[160px]"
             alt="Wira Ariandi Utama logo"
           />
+          <p className="text-lg md:text-2xl">Wira Ariandi Group</p>
         </NavLink>
 
-        <ul className="hidden md:flex items-center justify-center space-x-10 w-full">
+        {/* Centered Nav Links */}
+        <ul className="hidden lg:flex items-center space-x-10 absolute left-1/2 -translate-x-1/2">
           {navData.map((data) => (
             <li key={data.href}>
               <NavLink
                 to={data.href}
-                className={({ isActive }: { isActive: boolean }) => (isActive ? "font-bold" : "")}
+                className={({ isActive }: { isActive: boolean }) =>
+                  isActive ? "font-bold" : ""
+                }
               >
                 {data.placeholder}
               </NavLink>
@@ -39,7 +48,7 @@ export default function Navbar() {
         {/* Mobile Menu Button */}
         <button
           onClick={toggle}
-          className="md:hidden p-2 rounded-md hover:bg-accent"
+          className="lg:hidden p-2 rounded-md hover:bg-accent"
           aria-label={isOpen ? "Close menu" : "Open menu"}
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
