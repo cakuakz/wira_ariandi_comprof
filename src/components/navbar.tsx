@@ -65,7 +65,7 @@ export default function Navbar() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               onClick={close}
-              className="fixed inset-0 bg-background/95 md:hidden"
+              className="fixed inset-0 bg-background/95 lg:hidden"
             />
 
             {/* Drawer */}
@@ -74,7 +74,7 @@ export default function Navbar() {
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-              className="fixed z-30 top-0 right-0 bottom-0 w-[300px] bg-[#0E0E0E] border-l shadow-lg md:hidden"
+              className="fixed z-30 top-0 right-0 bottom-0 w-[300px] bg-[#0E0E0E] border-l shadow-lg lg:hidden"
             >
               <div className="flex flex-col p-4">
                 <div className="flex justify-end mb-8">
